@@ -4,9 +4,12 @@ import Slidercontainer from "./Sliderconteiner";
 import Checkbox from "./Chekbox";
 import Strength from "./strength";
 import Generator from "./Generator";
-
+interface Maincontprops {
+  setPassword: (password: String) => void;
+}
 function Maincont({ setPassword }) {
-  const [checkedState, setCheckedState] = useState(new Array(4).fill(false));
+  const [checkedState, setCheckedState] =
+    useState < Boolean > new Array(4).fill(false);
   const [length, setLength] = useState(10); // Default length
 
   const generatePassword = () => {

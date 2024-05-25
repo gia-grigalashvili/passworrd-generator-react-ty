@@ -1,6 +1,9 @@
 import styled from "styled-components";
-
-function Sliderconteiner({ length, setLength }) {
+interface SliderContainerProps {
+  length: number;
+  setLength: (length: number) => void;
+}
+function Sliderconteiner({ length, setLength }: SliderContainerProps) {
   return (
     <Slidermain>
       <div className="slider-text">
